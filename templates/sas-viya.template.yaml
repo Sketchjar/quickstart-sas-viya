@@ -2054,7 +2054,7 @@ Resources:
                 '
             03-validate_parms:
               command: !Sub |
-                #!/bin/bash -e
+                #!/bin/bash
                 FAILMSG="$(/sas/install/scripts/validate_parameters.sh)"
                 export RC=$?; export FAILMSG
                 [ ! $RC = 0 ] && /sas/install/scripts/send_sns_message.sh failure
